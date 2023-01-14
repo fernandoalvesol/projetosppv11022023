@@ -22,8 +22,8 @@ Route::get('/', [SiteController::class, 'index'])->name('site');
 });
 */
 
-Route::get('/painel', [PainelController::class, 'index'])
-->middleware(['auth'])->name('painel');
+Route::get('/dashboard', [PainelController::class, 'index'])
+->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 

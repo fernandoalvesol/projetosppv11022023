@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --red:#d63a25;
+    --cinza:#f5f5f5;
+    --white:#fff;
+    --dark:#1e1c2a;
+    --orange:rgb(172, 87, 87);
+    --cor-primaria-success: rgb(75, 200, 138);
+    --cor-hover-success: rgb(116, 158, 137);
+    --cor-secundaria-success: rgb(27, 66, 50);
+    
+    --cor-primaria-info: rgb(61, 157, 246);
+    --cor-hover-info: rgb(116, 134, 158);
+    --cor-secundaria-info: rgb(31, 62, 88);
+
+    --cor-primaria-danger: rgb(200, 75, 75);
+    --cor-hover-danger: rgb(158, 116, 116);
+    --cor-secundaria-danger: rgb(58, 22, 22);
+}
+body{
+    color: var(--dark);
+    background-color: var(--cinza);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    background-color: var(--orange);
+    width: 100%;
+    transition: 0.5s; 
+}
+.cabecalho .logo img{
+    width: 320px;
+    height: 120px;
+}
+.cabecalho-texto{
+        display: flex;
+        flex-flow: column;
+        position: absolute;
+        left: 60%;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        color: var(--white);
+    }
+    .navegation ul{
+        display: flex;
+        justify-content: center;
+        height: 120px;
+        align-items: center;
+        gap: 4rem;
+        width: 100%;
+        transition: 0.5s;
+    }
+    .navegation ul li a{
+        text-transform: uppercase;
+        color: var(--orange);
+        font-size: 12px;
+        font-weight: 500px;
+        transition: all 0.5s;
+    }
+    .navegation ul li a:hover{
+        color: #130a07
+    
+    }
+    .btn-sair{
+       
+        display: block;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--orange);
+        position: absolute;
+        margin-top: 50px;
+        left: 89%;
+    }
+    .container{
+        width: 100%px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container .title-pag{
+
+        margin-top: 2rem;
+        margin-right: 8rem;
+        margin-left: 5rem;
+    }
+    .container .title-pag p{
+        display: block;
+        margin-right: 20PX;
+        width: max-content;
+        padding: 2px;
+        font-weight: 600;
+    }
+    .container .title-pag h2{
+        text-transform: uppercase;
+        padding: 5px;
+    }
+    .container .title-pag span{
+        color: var(--orange);
+        font-weight: 600;
+    }
+    .col{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 8rem;
+        margin-left: 5rem;
+        margin-top: 30px;
+    }
+    .col .caixa{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 5px;
+        border: solid 1px var(--cor-primaria-danger);
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        width: 270px;
+        height: 100px;
+    }
+ 
+    .col .caixa p{
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+          
+    }
+    
+    .col .caixa button{
+        text-transform: uppercase;
+        background-color: var(--cor-primaria-danger);
+        color: var(--white);
+        width: 80%;
+        border: none;
+        border-radius: 0.4rem;
+        font-size: 12px;
+        font-weight: 500px;
+        transition: all 0.5s;
+        padding: 0.3rem;
+    }
+
+    .col .caixa button:hover{
+      background-color: var(--cor-hover-danger);
+      color: var(--white);
+    }
+    i{
+        font-size:  12px ;
+        color: var(--orange);
+        margin-right: 0.1rem;
+        gap: 5px;
+        
+    }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

@@ -23,7 +23,7 @@ body{
     justify-content: space-between;
     padding: 10px 40px;
     box-shadow: 0 0.1rem 0.5rem #c9c7c7;
-    background-color: rgb(149 16 16);
+    background-color: rgb(255 249 249);
     width: 100%;
     transition: 0.5s;
 }
@@ -44,8 +44,8 @@ body{
 }
 .navegation ul li a{
     text-transform: uppercase;
-    color: #f3eeee;
-    font-size: 11px;
+    color: #740a0a;
+    font-size: 15px;
 }
 .navegation ul li a:hover{
     color: var(--dark);

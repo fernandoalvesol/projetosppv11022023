@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="site/assets/css/page.css">
+    <link rel="stylesheet" href="{{url('site/assets/css/page.css')}}">
     <title>SITE</title>
 </head>
 <body>
@@ -20,7 +20,6 @@
                 <li class="nav-item"><a href="">Contatos</a></li>
                 <li class="nav-item"><a href="">LGPD</a></li>
                 <li class="nav-login"><a href="{{url('/login')}}">Acessar</a></li>
-
                 
             </ul>
             <div class="menu">

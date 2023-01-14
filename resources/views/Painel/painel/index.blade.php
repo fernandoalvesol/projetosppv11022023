@@ -1,11 +1,39 @@
 @extends('Layout.app')
 
-@section('title', 'Listagem dos usuários')
-
 @section('content')
 
-<h1 class="text-2xl font-semibold leading-tigh py-1">
-    SPP - SISTEMA DE PROTEÇÃO DE PROVEDORES
-    <a href="#" class="bg-blue-900 rounded-full text-white px-5 text-sm">+</a>
-    <a href="{{url('/logout')}}" class="bg-blue-900 rounded-full text-white px-5 text-sm">sair</a>
-</h1>
+<div class="row">
+	<section class="container">
+		<div class="title-pag">
+			<h2>Negativação de Clientes</h2>
+		</div>
+		<div class="title-pag">
+			<p>Bem vind!</p>
+			<p>Login: <span>cliente</span></p>
+			<p>Ip: <span>177.71.48.10</span></p>
+		</div>
+	</section>
+	<div class="col">
+	<div class="caixa">
+		<p>negativar devedores</p>
+	
+		<button>incluir</button>
+	</div>
+	<div class="caixa">
+		<p>baixar devedores</p>
+		<button>baixar</button>
+	</div>
+	<div class="caixa">
+		<p>relatório de devedores</p>
+		<button>listar</button>
+	</div>
+	<div class="caixa">
+		<p>mensagens devedores</p>
+		<button>ver mensagns</button>
+	</div>
+</div>
+
+</div>
+
+@endsection
+
