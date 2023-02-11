@@ -12,8 +12,8 @@ class Blacklist extends Model
 
     protected $fillable = [
 
-        'tipodepessoa', 'tipo', 'razaosocial', 'endereco', 'complemento', 'bairro', 
-        'cidade', 'cep','uf', 'celular', 'email', 'fone', 'natoperacao', 'dtocorrencia', 
+        'tipopessoa', 'tipo', 'razaosocial', 'endereco', 'complemento', 'bairro', 
+        'cidade', 'cep','uf', 'email', 'fone', 'celular', 'natoperacao', 'dtocorrencia', 
         'numcontrato', 'valor', 'observacoes',
 
     ];

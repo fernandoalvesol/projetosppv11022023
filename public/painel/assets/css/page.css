@@ -21,7 +21,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 40px;
+    padding: 11px 40px;
     box-shadow: 0 0.1rem 0.5rem #c9c7c7;
     background-color: rgb(255 249 249);
     width: 100%;
@@ -40,7 +40,7 @@ body{
 .navegation ul{
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 6rem;
 }
 .navegation ul li a{
     text-transform: uppercase;

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\SiteController;
 use App\Http\Controllers\Painel\PainelController;
+use App\Http\Controllers\Painel\BlacklistController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,12 +17,26 @@ use App\Http\Controllers\Painel\PainelController;
 
 Route::get('/', [SiteController::class, 'index'])->name('site');
 
+Route::middleware(['auth'])->group(function(){
+
+    Route::get('/dashboard', [PainelController::class, 'index'])->name('dashboard');
+    Route::get('/blacklist', [BlacklistController::class, 'index'])->name('blacklist.index');
+
+
+
+
+});
+
+require __DIR__.'/auth.php';
+
 /**
  Route::get('/', function () {
     return view('welcome');
 });
 */
 
+
+/** 
 Route::get('/dashboard', [PainelController::class, 'index'])
 ->middleware(['auth'])->name('dashboard');
 
