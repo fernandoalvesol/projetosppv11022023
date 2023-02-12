@@ -48,16 +48,14 @@
         </section>
     </main>
     <footer>
-        <section class="rodape">
-            <div class="empresa">
-                White List Of Customers For Providers - <span>Todos os direitos reservados - 2023</span>
-            </div>
-            <div class="contato-info">
-                <p class="fone">Fone: +55 81 993401403</p>
-                <p class="email">E-mail: jausoares@gmail.com</p>
-                <span>Rua 15 de Novembro, 56 - Centro - Condado - PE - Brasil.</span>
-            </div>
-        </section>
-    </footer>
+    <section class="rodape">
+        <div class="empresa">
+            ARAUJO ASSESSORIA - <span>Todos os direitos reservados - 2023</span>
+        </div>
+        <div class="contato-info">
+            <p class="fone">www.araujoassessoria.com.br</p>
+        </div>
+    </section>
+</footer>
 </body>
 </html>

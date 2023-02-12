@@ -16,9 +16,8 @@
     
     <div class="cabecalho-texto">
         <h2>Central de atendimento</h2>
-        <p>(81) 996071609 <i class='bx bxl-whatsapp'></i></p>
         <p>(81) 4242.1515 <i class='bx bxs-phone'></i></p>
-        <p>jausoares@gmail.com <i class='bx bx-envelope'></i></p>
+        <p>www.araujoassessoria.com.br<i class='bx bx-envelope'></i></p>
     </div>     
 
 </header>
@@ -38,6 +37,7 @@
 <div>
     @yield('content')
 </div>
+
 
 <script src="{{url('painel/assets/js/script.js')}}"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

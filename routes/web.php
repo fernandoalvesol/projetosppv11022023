@@ -21,6 +21,7 @@ Route::middleware(['auth'])->group(function(){
 
     Route::get('/dashboard', [PainelController::class, 'index'])->name('dashboard');
     Route::get('/blacklist', [BlacklistController::class, 'index'])->name('blacklist.index');
+    Route::post('/store', [BlacklistController::class, 'store'])->name('blacklist.store');
 
 
 

@@ -12,15 +12,20 @@ class Blacklist extends Model
 
     protected $fillable = [
 
-        'tipopessoa', 'tipo', 'razaosocial', 'endereco', 'complemento', 'bairro', 
+        'users_id', 'cpf', 'tipo', 'razaosocial', 'endereco', 'complemento', 'bairro', 
         'cidade', 'cep','uf', 'email', 'fone', 'celular', 'natoperacao', 'dtocorrencia', 
-        'numcontrato', 'valor', 'observacoes',
+        'numcontrato', 'valor', 'obs',
 
     ];
 
     protected $cast = [
 
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function provedor(){
 
