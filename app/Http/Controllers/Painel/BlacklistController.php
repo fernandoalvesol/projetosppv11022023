@@ -4,20 +4,22 @@ namespace App\Http\Controllers\Painel;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Blacklist;
 use App\Http\Requests\Painel\BlacklistsFormRequest;
 
 class BlacklistController extends Controller
 {
 
-    private $blacklist, $totalPage = 100;
+    protected $model;
+    private $totalPage = 100;
     private $request;
     
 
-    public function __construct(Blacklist $blacklist, Request $request){
+    public function __construct(Blacklist $blacklist){
 
-        $this->blacklist = $blacklist;
-        $this->requet = $request;
+       $this->model = $blacklist;
 
     }
 
@@ -26,25 +28,29 @@ class BlacklistController extends Controller
         $title = "Negativação";
 
                 
-        $blacklist = $this->blacklist->paginate($this->totalPage);
+        $blacklist = $this->model->paginate($this->totalPage);
 
        return view('Painel.Blacklist.index', compact('blacklist', 'title'));
        
         }
 
     public function store(BlacklistsFormRequest $request){
-        
-        $dataBlacklist = $request->all();
 
-        //$dataBlacklist = $request->validated();
+        $data = $request->all();
 
-        $dataBlacklist['users_id'] = auth()->user()->id;
+        $data['users_id'] = auth()->user()->id;
 
+        $insert = $this->model->create($data);
 
-        $this->blacklist->create($dataBlacklist);
-
-        return redirect()->route('blacklist.index');
-
+        if ($insert)
+            return redirect()
+                            ->route('blacklist.index')
+                            ->with(['sucess' => 'NEGATIVAÇÃO REALIZADA COM SUCESSO.']);
+        else
+            return redirect()
+                            ->route('blacklist.index')
+                            ->withErrors(['errors' => 'Falhar ao cadastrar...'])
+                            ->withInput();
         
     }
 

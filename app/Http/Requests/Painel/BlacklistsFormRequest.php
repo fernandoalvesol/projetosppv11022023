@@ -40,9 +40,7 @@ class BlacklistsFormRequest extends FormRequest
             'celular'         => 'required|min:3|max:11',  
             'natoperacao'     => 'required',
             'dtocorrencia'    => 'required',
-            'numcontrato'     => 'required',
             'valor'           => 'required',
-            'obs'             => 'required|min:3|max:1024',
 
 
         ];

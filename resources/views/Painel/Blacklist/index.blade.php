@@ -13,8 +13,34 @@
     </div>
 </div>
 
+@if( Session::has('sucess') )
+<div class="container">
+    <div class="col-md-12">
+        <div class="alert alert-success hide-msg" style="float: left; width: 100%; margin: 10px 0px;">
+            {{Session::get('sucess')}}
+        </div>
+    </div>
+
+</div>    
+@endif
+
+@if($errors->any())
+<div class="container">
+        <div class="col-md-12">
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ( $errors->all() as $error)
+                        <li>
+                            {{ $error }}
+                        </li> 
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
+@endif
 <table class="table table-striped">
-        <form action="{{ route('blacklist.store')}}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('blacklist.store') }}" method="post" enctype="multipart/form-data">
             @include('Painel.Blacklist._partials.form')
         </form>     
 </table>
