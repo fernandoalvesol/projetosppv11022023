@@ -6,13 +6,12 @@
 	
 	<div class="col">
 	<div class="caixa">
-		<p>negativar devedores</p>
-	
-		<a href="{{ route('blacklist.index') }}">Incluir</a>
+		<p>negativar devedores</p>	
+		<a href="{{ route('blacklist.index') }}" class="btn-negativar">INCLUIR</a>
 	</div>
 	<div class="caixa">
 		<p>baixar devedores</p>
-		<button>baixar</button>
+		<a href="{{ route('blacklist.lista') }}" class="btn-negativar">BAIXAR</a>
 	</div>
 	<div class="caixa">
 		<p>relatório de devedores</p>

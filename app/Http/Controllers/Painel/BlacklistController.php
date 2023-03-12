@@ -54,4 +54,16 @@ class BlacklistController extends Controller
         
     }
 
+    public function lista(Request $request){
+
+        $title = "Exibir Negativados";
+
+        $blacklist = $this->model->paginate($this->totalPage);
+       
+        return view('Painel.Blacklist.lista', compact('blacklist', 'title'));
+
+
+
+    }
+
 }
