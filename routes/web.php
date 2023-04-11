@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\SiteController;
 use App\Http\Controllers\Painel\PainelController;
 use App\Http\Controllers\Painel\BlacklistController;
+use App\Http\Controllers\Painel\ProvedoresController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,12 +20,17 @@ Route::get('/', [SiteController::class, 'index'])->name('site');
 
 Route::middleware(['auth'])->group(function(){
 
+    //Rotas Blacklists
     Route::get('/dashboard', [PainelController::class, 'index'])->name('dashboard');
     Route::get('/blacklist', [BlacklistController::class, 'index'])->name('blacklist.index');
     Route::post('/store', [BlacklistController::class, 'store'])->name('blacklist.store');
     Route::get('/lista', [BlacklistController::class, 'lista'])->name('blacklist.lista');
 
 
+    //Rotas Provedores
+    Route::get('/index', [ProvedoresController::class, 'index'])->name('provedor.index');
+    Route::get('/provedores', [ProvedoresController::class, 'create'])->name('provedor.create');
+    
 
 
 });
