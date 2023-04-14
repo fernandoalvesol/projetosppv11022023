@@ -27,10 +27,15 @@ class ProvedorFormRequest extends FormRequest
 
             'razaosocial'             => 'required',
             'nomefantasia'            => 'required',
-            'email'                   => 'required',
             'tipo'                    => 'required',
+            'cnpj'                    => 'required',  
+            'inestadual'              => 'required',
+            'email'                   => 'required',   
+            'site'                    => ['nullable'],
+            'atoanatel'               => ['nullable'],
+            'inmunicipal'             => ['nullable'],
             'fone'                    => 'required|min:3|max:11', 
-            'contato'                 => 'required', 
+            'contato'                 => 'required',
         ];
     }
 }

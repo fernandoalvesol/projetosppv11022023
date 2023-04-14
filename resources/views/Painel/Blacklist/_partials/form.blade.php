@@ -5,18 +5,18 @@
             <label for="inputTipo">Tipo de pessoa *:</label>
             <select class="form-select form-control form-control" name="tipo" id="tipo">
                 <option value="Escolha">Escolha</option>
-                <option value="cnpj">cnpj</option>
-                <option value="cpf">cpf</option>
+                <option value="fisica">fisica</option>
+                <option value="juridica">juridica</option>
             </select>  
         </div>       
 
         <div class="form-group col-md-5">
-            <label for="inputCpf">CPF *:</label><br>
-            <input type="text" name="cpf" class="form-control" id="cpf" placeholder="CPF:">
+            <label for="inputCnpjcpf">CPF/CNPJ *:</label><br>
+            <input type="text" name="cnpjcpf" class="form-control" id="cnpjcpf" placeholder="CPF/CNPJ:">
         </div>
         <div class="form-group col-md-5">
             <label for="inputCpf">RG *:</label><br>
-            <input type="text" name="cpf" class="form-control" id="rg" placeholder="RG:">
+            <input type="text" name="rg" class="form-control" id="rg" placeholder="RG:">
         </div>
     </div>
     <div class="form-row col-md-12 formulario-cadblack">
@@ -88,8 +88,8 @@
             <input type="text" name="numcontrato" class="form-control" id="contrato" placeholder="Número do Contrato:">
         </div>
         <div class="form-group col-md-4">
-            <label for="inputValor">VALOR R$ *:</label><br>
-            <input type="text" name="valor" class="form-control" id="valor" placeholder="VALOR R$:">
+            <label for="inputPrice">VALOR R$ *:</label><br>
+            <input type="text" name="price" class="form-control" id="price" placeholder="VALOR R$:">
         </div>
                  
     </div>

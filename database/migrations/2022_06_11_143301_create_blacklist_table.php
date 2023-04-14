@@ -13,30 +13,31 @@ class CreateBlacklistTable extends Migration
      */
     public function up()
     {
-        Schema::create('blacklist', function (Blueprint $table) {
+        Schema::create('blacklists', function (Blueprint $table) {
             $table->increments('id');            
             $table->integer('users_id')->unsigned();
             $table->foreign('users_id')
                   ->references('id')
                   ->on('users')
                   ->onDelete('cascade');
-            $table->string('tipodepessoa');
-            $table->enum('tipo',['cnpj', 'cpf']);
-            $table->string('razaosocial');
-            $table->string('endereco');
-            $table->string('complemento');
-            $table->string('bairro');
-            $table->string('cidade');
+            $table->enum('tipo',['fisica', 'juridica']);
+            $table->string('cnpjcpf', 100);
+            $table->integer('rg');
+            $table->string('razaosocial', 155);
+            $table->string('endereco', 155);
+            $table->string('complemento', 155);
+            $table->string('bairro', 155);
+            $table->string('cidade', 155);
             $table->integer('cep');
-            $table->string('uf');
+            $table->string('uf', 50);
             $table->string('email');
-            $table->integer('fone');
-            $table->integer('celular');
-            $table->string('natoperacao');
+            $table->string('fone', 50);
+            $table->string('celular', 50);
+            $table->string('natoperacao', 155);
             $table->date('dtocorrencia');
             $table->integer('numcontrato');
-            $table->double('valor', 8, 2);
-            $table->text('observacoes');
+            $table->double('price', 10, 2);
+            $table->text('obs')->nullable();
             $table->timestamps();
         });
     }

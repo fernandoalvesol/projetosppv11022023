@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Provedores;
+use App\Http\Requests\Painel\ProvedorFormRequest;
 
 
 class ProvedoresController extends Controller
@@ -27,7 +28,9 @@ class ProvedoresController extends Controller
 
         $title = "Cadastro de Provedores";
 
-        return view('Painel.Provedores.index', compact('title'));
+        $provedor = $this->model->paginate($this->totalPage);
+
+        return view('Painel.Provedores.index', compact('title', 'provedor'));
 
         
        
@@ -42,7 +45,21 @@ class ProvedoresController extends Controller
 
         }
 
-        public function store(){
+        public function store(ProvedorFormRequest $request){
+
+        $data = $request->all();
+
+        $insert = $this->model->create($data);
+
+        if ($insert)
+            return redirect()
+                            ->route('provedor.index')
+                            ->with(['sucess' => 'CADASTRO REALIZADO COM SUCESSO.']);
+        else
+            return redirect()
+                            ->route('provedor.index')
+                            ->withErrors(['errors' => 'Falhar ao cadastrar...'])
+                            ->withInput();
 
 
         }

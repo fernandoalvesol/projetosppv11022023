@@ -40,7 +40,7 @@
     </div>
 @endif
 <table class="table table-striped">
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form action="{{ route('provedor.store') }} " method="post" enctype="multipart/form-data">
             @include('Painel.Provedores._partials.form')
         </form>     
 </table>

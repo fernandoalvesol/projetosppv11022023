@@ -15,16 +15,17 @@ class CreateProvedoresTable extends Migration
     {
         Schema::create('provedores', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('razaosocial');
-            $table->string('nomefantasia');
-            $table->string('email');
-            $table->string('site');
-            $table->enum('tipo',['cnpj', 'cpf']);
-            $table->string('inestadual');
-            $table->string('inmunicipal');
-            $table->string('atoanatel');
-            $table->string('fone');
-            $table->string('contato');
+            $table->string('razaosocial', 155);
+            $table->string('nomefantasia', 155);
+            $table->enum('tipo',['fisica','juridica']);
+            $table->string('cnpj', 50);
+            $table->integer('inestadual');
+            $table->integer('inmunicipal');
+            $table->string('email', 155);
+            $table->string('site', 155);            
+            $table->integer('atoanatel');
+            $table->string('fone', 50);
+            $table->string('contato', 155);
             $table->timestamps();
         });
     }

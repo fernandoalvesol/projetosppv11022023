@@ -12,9 +12,9 @@ class Blacklist extends Model
 
     protected $fillable = [
 
-        'users_id','cpf', 'tipo', 'razaosocial', 'endereco', 'complemento', 'bairro', 
+        'users_id','tipo', 'cnpjcpf', 'rg', 'razaosocial', 'endereco', 'complemento', 'bairro', 
         'cidade', 'cep','uf', 'email', 'fone', 'celular', 'natoperacao', 'dtocorrencia', 
-        'numcontrato', 'valor', 'obs',
+        'numcontrato', 'price', 'obs',
 
     ];
 

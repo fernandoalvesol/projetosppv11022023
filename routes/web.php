@@ -23,14 +23,14 @@ Route::middleware(['auth'])->group(function(){
     //Rotas Blacklists
     Route::get('/dashboard', [PainelController::class, 'index'])->name('dashboard');
     Route::get('/blacklist', [BlacklistController::class, 'index'])->name('blacklist.index');
-    Route::post('/store', [BlacklistController::class, 'store'])->name('blacklist.store');
+    Route::post('/blacklist.store', [BlacklistController::class, 'store'])->name('blacklist.store');
     Route::get('/lista', [BlacklistController::class, 'lista'])->name('blacklist.lista');
 
 
     //Rotas Provedores
     Route::get('/index', [ProvedoresController::class, 'index'])->name('provedor.index');
     Route::get('/provedores', [ProvedoresController::class, 'create'])->name('provedor.create');
-    
+    Route::post('/store', [ProvedoresController::class, 'store'])->name('provedor.store');
 
 
 });

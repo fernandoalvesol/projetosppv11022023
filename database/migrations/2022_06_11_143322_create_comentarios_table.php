@@ -15,12 +15,12 @@ class CreateComentariosTable extends Migration
     {
         Schema::create('comentarios', function (Blueprint $table) {
             $table->increments('id');            
-            $table->integer('blacklist_id')->unsigned();
-            $table->foreign('blacklist_id')
+            $table->integer('blacklists_id')->unsigned();
+            $table->foreign('blacklists_id')
                   ->references('id')
-                  ->on('blacklist')
+                  ->on('blacklists')
                   ->onDelete('cascade');
-            $table->text('comentario');
+            $table->text('description');
             $table->boolean('visivel');
             $table->date('dtcomentarios');
             $table->timestamps();

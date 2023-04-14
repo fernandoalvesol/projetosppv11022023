@@ -26,8 +26,9 @@ class BlacklistsFormRequest extends FormRequest
 
         return [
 
-            'cpf'             => 'required',
             'tipo'            => 'required',
+            'cnpjcpf'         => 'required',
+            'rg'              => 'required',
             'razaosocial'     => 'required',
             'endereco'        => 'required', 
             'complemento'     => 'required', 
@@ -40,7 +41,9 @@ class BlacklistsFormRequest extends FormRequest
             'celular'         => 'required|min:3|max:11',  
             'natoperacao'     => 'required',
             'dtocorrencia'    => 'required',
-            'valor'           => 'required',
+            'price'           => 'required',
+            'obs'             => ['nullable'],
+                 
 
 
         ];
