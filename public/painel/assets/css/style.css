@@ -179,6 +179,22 @@ header {
     padding: 10px 22px 10px 19px;
 }
 
+.pageshow{
+    margin: 17px 22px 17px 23px;
+    padding: 21px 9px 9px 28px;
+    font-size: 20px;
+}
+
+/*botões painel*/
+
+.btn-cadprovedor{
+    text-align: right;
+    margin-top: 60px;
+}
+
+
+
+
 
 
 

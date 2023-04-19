@@ -13,7 +13,7 @@ use App\Http\Requests\Painel\ProvedorFormRequest;
 class ProvedoresController extends Controller
 {
     
-    protected $model;
+    private $model;
     private $totalPage = 100;
     private $request;
     
@@ -35,7 +35,7 @@ class ProvedoresController extends Controller
         
        
         }
-        public function create(){
+    public function create(){
 
         $title = "Lista de Provedores";
                 
@@ -45,7 +45,7 @@ class ProvedoresController extends Controller
 
         }
 
-        public function store(ProvedorFormRequest $request){
+    public function store(ProvedorFormRequest $request){
 
         $data = $request->all();
 
@@ -63,14 +63,52 @@ class ProvedoresController extends Controller
 
 
         }
-        public function show(){
+    public function show($id){
+
+        $provedor = $this->model->where('id', $id)->first();
+
+        if(!$provedor)
+            return redirect()->back();
+        
+        return view('Painel.Provedores.show', compact('provedor'));
+
 
         }
-        public function destroy(){
+    public function edit($id){
+
+        $provedor = $this->model->find($id);
+
+        return view('Painel.Provedores.edit', compact('provedor'));
+
+
+    }
+
+    public function update(ProvedorFormRequest $request, $id){
+
+        $data = $request->all();
+
+        $provedor = $this->model->find($id);
+
+        $update = $provedor->update($data);
+
+            if($update)
+                return redirect()
+                        ->route('provedor.index')
+                        ->with(['sucess' => 'Provedor Atualizado com sucesso']);
+            else
+                return redirect()
+                        ->route('provedor.index')
+                        ->with(['errors' => 'Falhar ao atualizar']);
+
+
+    }
+    
+    public function destroy(){
 
         }
 
-        public function search(){
+    
+    public function search(){
 
         }
 }

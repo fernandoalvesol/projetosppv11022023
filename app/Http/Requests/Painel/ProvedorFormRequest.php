@@ -27,7 +27,7 @@ class ProvedorFormRequest extends FormRequest
 
             'razaosocial'             => 'required',
             'nomefantasia'            => 'required',
-            'tipo'                    => 'required',
+            'tipo'                    => ['nullable'],
             'cnpj'                    => 'required',  
             'inestadual'              => 'required',
             'email'                   => 'required',   

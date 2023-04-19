@@ -39,11 +39,14 @@
         </div>
     </div>
 @endif
-<table class="table table-striped">
+<div class="card">
+    <div class="card-header">
         <form action="{{ route('blacklist.store') }}" method="post" enctype="multipart/form-data">
             @include('Painel.Blacklist._partials.form')
-        </form>     
-</table>
+        </form>  
+    </div>
+           
+</div>
 
 <footer>
         <section class="rodape">

@@ -40,9 +40,9 @@
     </div>
 @endif
 <table class="table table-striped">
-        <form action="{{ route('provedor.store') }} " method="post" enctype="multipart/form-data">
-            @include('Painel.Provedores._partials.form')
-        </form>     
+    <form action="{{ route('provedor.store') }} " method="post" enctype="multipart/form-data">
+        @include('Painel.Provedores._partials.form')
+    </form>     
 </table>
 
 <footer>

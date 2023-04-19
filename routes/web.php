@@ -31,6 +31,10 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/index', [ProvedoresController::class, 'index'])->name('provedor.index');
     Route::get('/provedores', [ProvedoresController::class, 'create'])->name('provedor.create');
     Route::post('/store', [ProvedoresController::class, 'store'])->name('provedor.store');
+    Route::get('/create', [ProvedoresController::class, 'create'])->name('provedor.create');
+    Route::get('/show/{id}', [ProvedoresController::class, 'show'])->name('provedor.show');
+    Route::get('/edit/{id}', [ProvedoresController::class, 'edit'])->name('provedor.edit');
+    Route::put('/update/{id}', [ProvedoresController::class, 'update'])->name('provedor.update');
 
 
 });
