@@ -35,7 +35,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/show/{id}', [ProvedoresController::class, 'show'])->name('provedor.show');
     Route::get('/edit/{id}', [ProvedoresController::class, 'edit'])->name('provedor.edit');
     Route::put('/update/{id}', [ProvedoresController::class, 'update'])->name('provedor.update');
-
+    Route::get('/destroy/{id}', [ProvedoresController::class, 'destroy'])->name('provedor.destroy');
+    Route::any('/pesquisar', [ProvedoresController::class, 'search'])->name('provedor.search');
 
 });
 

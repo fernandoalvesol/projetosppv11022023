@@ -103,12 +103,40 @@ class ProvedoresController extends Controller
 
     }
     
-    public function destroy(){
+    public function destroy($id){
+
+        $provedor = $this->model->find($id);
+
+        $delete = $provedor->delete();
+
+            if( $delete ){
+
+                return redirect()
+                            ->route('provedor.index')
+                            ->with(['sucess' => 'Provedor deletado com sucesso']);
+
+            }
+            else{
+                return redirect()
+                            ->route('provedor.index', ['id' => $id])
+                            ->withErrors(['errors' => 'Falha ao deletar']);
+
+            }
+
+
 
         }
 
     
-    public function search(){
+    public function search(Request $request){
+
+        $query = $request->input('query');
+        
+        $provedor = $this->model
+                        ->where('razaosocial', 'LIKE', '%'.$query.'%')
+                        ->orWhere('cnpj', 'LIKE', '%'.$query.'%')->get();
+        
+         return view('Painel.Provedores.index', compact('provedor', 'query'));
 
         }
 }
