@@ -71,7 +71,7 @@
                                         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                         <a class="dropdown-item" href="{{ route('provedor.edit', $provedores->id) }}"><box-icon name='edit' type='solid' animation='tada' ></box-icon> EDITAR</a>
                                         <a class="dropdown-item" href="{{ route('provedor.show', $provedores->id) }}"><box-icon name='show' animation='tada' ></box-icon> DETALHES</a>
-                                        <a class="dropdown-item" href="{{ route('provedor.destroy', $provedores->id) }}"><box-icon name='trash' animation='tada' ></box-icon> DELETAR</a>
+                                        <a class="dropdown-item" href="{{ route('provedor.delete', $provedores->id) }}"><box-icon name='trash' animation='tada' ></box-icon> DELETAR</a>
     
                                     </div>
                                     </div>

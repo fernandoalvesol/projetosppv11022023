@@ -74,6 +74,7 @@ class ProvedoresController extends Controller
 
 
         }
+        
     public function edit($id){
 
         $provedor = $this->model->find($id);

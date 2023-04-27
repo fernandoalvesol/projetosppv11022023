@@ -5,6 +5,7 @@ use App\Http\Controllers\Site\SiteController;
 use App\Http\Controllers\Painel\PainelController;
 use App\Http\Controllers\Painel\BlacklistController;
 use App\Http\Controllers\Painel\ProvedoresController;
+use App\Http\Controllers\Painel\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,15 +29,17 @@ Route::middleware(['auth'])->group(function(){
 
 
     //Rotas Provedores
-    Route::get('/index', [ProvedoresController::class, 'index'])->name('provedor.index');
-    Route::get('/provedores', [ProvedoresController::class, 'create'])->name('provedor.create');
-    Route::post('/store', [ProvedoresController::class, 'store'])->name('provedor.store');
-    Route::get('/create', [ProvedoresController::class, 'create'])->name('provedor.create');
-    Route::get('/show/{id}', [ProvedoresController::class, 'show'])->name('provedor.show');
-    Route::get('/edit/{id}', [ProvedoresController::class, 'edit'])->name('provedor.edit');
-    Route::put('/update/{id}', [ProvedoresController::class, 'update'])->name('provedor.update');
-    Route::get('/destroy/{id}', [ProvedoresController::class, 'destroy'])->name('provedor.destroy');
-    Route::any('/pesquisar', [ProvedoresController::class, 'search'])->name('provedor.search');
+    Route::get('/provedor', [ProvedoresController::class, 'index'])->name('provedor.index');    
+    Route::any('/pesquisar', [ProvedoresController::class, 'search'])->name('provedor.search');   
+    Route::get('{id}/destroy', [ProvedoresController::class, 'destroy'])->name('provedor.delete');
+    Route::resource('provedor', ProvedoresController::class);    
+
+
+    //Rotas Usuários
+    Route::get('/usuarios', [UserController::class, 'index'])->name('user.index');       
+    Route::any('/pesquisar', [UserController::class, 'search'])->name('user.search');   
+    Route::get('{id}/destroy', [UserController::class, 'destroy'])->name('user.delete');
+    Route::resource('user', UserController::class);    
 
 });
 

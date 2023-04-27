@@ -29,7 +29,7 @@
         <li class="nav-item"><i class='bx bxs-home'></i> <a href="">Inicio</a></li>
         <li class="nav-item"><i class='bx bx-search' ></i> <a href="">Consultas</a</li>
         <li class="nav-item"><i class='bx bxs-user-minus'></i> <a href="">Negativação</a</li>
-        <li class="nav-item"><i class='bx bx-barcode'></i><a href="">Usuários</a</li>
+        <li class="nav-item"><i class='bx bx-barcode'></i><a href="{{ route('user.index') }}">Usuários</a</li>
         <li class="nav-item"><i class='bx bx-group'></i><a href="{{ route('provedor.index')}}">Provedores </a></li>
         <li class="nav-item"><i class='bx bx-headphone' ></i><a href="">Atendimento</a></li>
 		<li><a href="{{url('/logout')}}" class="nav-item"><i class='bx bx-exit'></i> Sair</a></li>
