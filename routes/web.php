@@ -26,13 +26,16 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/blacklist', [BlacklistController::class, 'index'])->name('blacklist.index');
     Route::post('/blacklist.store', [BlacklistController::class, 'store'])->name('blacklist.store');
     Route::get('/lista', [BlacklistController::class, 'lista'])->name('blacklist.lista');
+    Route::get('/black', [BlacklistController::class, 'black'])->name('blacklist.black');
+    Route::any('blacklist/search', [BlacklistController::class, 'search'])->name('blacklist.search');
+    Route::resource('blacklist', BlacklistController::class);
 
 
     //Rotas Provedores
     Route::get('/provedor', [ProvedoresController::class, 'index'])->name('provedor.index');    
-    Route::any('/pesquisar', [ProvedoresController::class, 'search'])->name('provedor.search');   
-    Route::get('{id}/destroy', [ProvedoresController::class, 'destroy'])->name('provedor.delete');
-    Route::resource('provedor', ProvedoresController::class);    
+    Route::any('/search', [ProvedoresController::class, 'search'])->name('provedor.search'); 
+    Route::get('{id}/delete', [ProvedoresController::class, 'destroy'])->name('provedor.delete');
+    Route::resource('provedor', ProvedoresController::class);  
 
 
     //Rotas Usuários

@@ -3,45 +3,46 @@
 @section('content')
 
 <div class="row col-md-12">
-@if( Session::has('sucess') )
-        <div class="container">
-            <div class="col-md-12">
-                <div class="alert alert-success hide-msg" style="float: left; width: 100%; margin: 10px 0px;">
-                    {{Session::get('sucess')}}
-                </div>
-            </div>
 
-        </div>
-@endif
-    <div class="row col-md-12">
-        <div class="col-md-6">
-            <div class="title-pag">
-                <p class="title-prov">USUÁRIOS CADASTRADOS
-                    <a href="{{ route('user.create') }}" 
-                        class="btn btn-cadprov">
-                        <box-icon name='folder-plus' animation='tada' rotate='90' ></box-icon> 
-                        CADASTRAR
-                    </a>
-                </p>
-            </div>
-        </div> 
-        <div class="col-md-6 form-pesquisar">
-            <form action="{{ route('user.search') }}" method="get" class="row g-3">
-
-                <div class="col-auto">
-                    <p class="subtitle-pesquisar">Digite o nome do usuário ou email cadastrado</p>
-                    <input type="text" class="form-control" id="query" name="query" placeholder="Pesquisar">
-                </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3"><box-icon name='search-alt' animation='tada' ></box-icon> Pesquisar</button>
-                </div>
-            </form>            
-        </div>       
-    </div>
 <div class="row">
     <div class="col-md-12">
     <div class="row card">
         <div class="card">
+        <div class="row col-md-12">
+            <div class="col-md-6">
+                <div class="title-pag">
+                    <p class="title-prov">CADASTRAR USUÁRIOS
+                        <a href="{{ route('user.create') }}" 
+                            class="btn btn-cadprov">
+                            <box-icon name='folder-plus' animation='tada' rotate='90' ></box-icon> 
+                            CADASTRAR
+                        </a>
+                    </p>
+                </div>
+            </div> 
+            <div class="col-md-6 form-pesquisar">
+                <form action="{{ route('user.search') }}" method="get" class="row g-3">
+
+                    <div class="col-auto">
+                        <p class="subtitle-pesquisar">Digite o nome do usuário ou email cadastrado</p>
+                        <input type="text" class="form-control" id="query" name="query" placeholder="Pesquisar">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3"><box-icon name='search-alt' animation='tada' ></box-icon></button>
+                    </div>
+                </form>            
+            </div>       
+        </div>
+        @if( Session::has('sucess') )
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="alert alert-success hide-msg" style="float: left; width: 100%; margin: 10px 0px;">
+                        {{Session::get('sucess')}}
+                    </div>
+                </div>
+
+            </div>
+        @endif
             <div class="col-md-12 table-responsive tabela-user">
                     <table class="table">
                         <tr>
@@ -49,7 +50,7 @@
                             <th>EMAIL</th>
                             <th>PROVEDOR</th>
                             <th>USUÁRIO</th>
-                            <th width="250">Ações</th>
+                            <th width="100">Ações</th>
                         </tr>
 
                         @forelse($user as $users)

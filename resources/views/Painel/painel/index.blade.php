@@ -11,11 +11,11 @@
 	</div>
 	<div class="caixa">
 		<p>baixar devedores</p>
-		<a href="{{ route('blacklist.lista') }}" class="btn-negativar">BAIXAR</a>
+		<a href="{{ route('blacklist.black') }}" class="btn-negativar">BAIXAR</a>
 	</div>
 	<div class="caixa">
-		<p>relatório de devedores</p>
-		<button>listar</button>
+		<p>consultar de devedores</p>
+		<a href="{{ route('blacklist.lista') }}" class="btn-negativar">CONSULTAR</a>
 	</div>
 	<div class="caixa">
 		<p>mensagens devedores</p>

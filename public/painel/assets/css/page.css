@@ -130,10 +130,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 40px;
+    padding: 15px 47px 9px 23px;
     box-shadow: 5px 5px 5px 5px #ccc;
     width: 100%;
-    transition: 0.5s; 
+    transition: 0.5s;
+    margin: 17px -27px 5px 6px;
 }
 @media(max-width:785px){
     .navegation{
